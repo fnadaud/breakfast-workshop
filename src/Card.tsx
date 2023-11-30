@@ -3,22 +3,22 @@ const Card = ({ title, type, image }: { title: string, type: string, image: stri
   const computeType = () => {
     if(type === "FAT") {
       return {
-        color: "#F6EB61",
+        color: "linear-gradient(150deg, rgba(255,243,91,1) 60%, rgba(255,236,71,1) 100%)",
         label: "Matière grasse"
       }
     } else if (type === "FRUIT") {
       return {
-        color: "#0A5C36",
+        color: "linear-gradient(150deg, rgba(12,112,66,1) 60%, rgba(10,92,54,1) 100%)",
         label: "Fruit"
       }
     } else if (type === "DAIRY") {
       return {
-        color: "#87CEFA",
+        color: "linear-gradient(150deg, rgba(135,206,250,1) 60%, rgba(118,182,222,1) 100%)",
         label: "Produit laitier"
       }
     } else if (type === "CEREAL") {
       return {
-        color: "#79443B",
+        color: "linear-gradient(150deg, rgba(126,71,62,1) 60%, rgba(112,63,54,1) 100%)",
         label: "Céréale"
       }
     } else {
@@ -32,10 +32,12 @@ const Card = ({ title, type, image }: { title: string, type: string, image: stri
   const realType = computeType();
 
   return (
-    <div className="card" style={{backgroundColor: realType.color}}>
+    <div className="card" style={{background: realType.color}}>
       <img src={image} />
-      <div>{title}</div>
-      <div>({realType.label})</div>
+      <div className="card-content">
+        <div>{title}</div>
+        <div>({realType.label})</div>
+      </div>
     </div>
   )
 }

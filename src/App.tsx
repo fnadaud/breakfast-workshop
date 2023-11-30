@@ -1,15 +1,18 @@
 import './App.css'
 import Card from './Card';
 
-import banane from "./assets/banane.jpeg";
-import beurre from "./assets/beurre.jpeg";
-import pain from "./assets/pain.jpeg";
-import yahourt from "./assets/yahourt.png";
+import appleImage from "./assets/apple.png";
+import bananaImage from "./assets/banana.png";
+import breadImage from "./assets/bread.png";
+import butterImage from "./assets/butter.png";
+import milkImage from "./assets/milk.png";
+import yogurtImage from "./assets/yogurt.png";
+import defaultImage from "./assets/default.png";
 
 function App() {
-  const fruits = ["Banane", "Pomme", "Orange"];
-  const fat = ["Beurre"];
-  const dairy = ["Yahourt", "Lait"];
+  const fruits = [{title: "Banane", image: bananaImage}, {title: "Pomme", image: appleImage}, {title: "Orange", image: defaultImage}];
+  const fat = [{title: "Beurre", image: butterImage}];
+  const dairy = [{title: "Yahourt", image: yogurtImage}, {title: "Lait", image: milkImage}];
   const cereals = ["Cracotte", "Pain", "Biscotte"];
 
   return (
@@ -22,10 +25,10 @@ function App() {
           Compose ton petit déjeuner !
         </h2>
         <div className="cards">
-          {fruits.map(item => <Card key={item} title={item} type="FRUIT" image={banane} />)}
-          {fat.map(item => <Card key={item} title={item} type="FAT" image={beurre} />)}
-          {dairy.map(item => <Card key={item} title={item} type="DAIRY" image={yahourt} />)}
-          {cereals.map(item => <Card key={item} title={item} type="CEREAL" image={pain} />)}
+          {fruits.map(item => <Card key={item.title} title={item.title} type="FRUIT" image={item.image} />)}
+          {fat.map(item => <Card key={item.title} title={item.title} type="FAT" image={item.image} />)}
+          {dairy.map(item => <Card key={item.title} title={item.title} type="DAIRY" image={item.image} />)}
+          {cereals.map(item => <Card key={item} title={item} type="CEREAL" image={breadImage} />)}
         </div>
       </div>
     </>
