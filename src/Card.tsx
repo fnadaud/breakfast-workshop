@@ -1,4 +1,13 @@
-const Card = ({ title, type, image }: { title: string, type: string, image: string }) => {
+import { useState } from "react";
+import defaultImage from "./assets/default.png";
+import Tick from "./Tick";
+
+const Card = ({ title, type, image = defaultImage }: { title: string, type: string, image: string }) => {
+  const [selected, setSelected] = useState(false);
+
+  const handleClick = () => {
+    setSelected(!selected);
+  }
 
   const computeType = () => {
     if(type === "FAT") {
@@ -32,7 +41,14 @@ const Card = ({ title, type, image }: { title: string, type: string, image: stri
   const realType = computeType();
 
   return (
-    <div className="card" style={{background: realType.color}}>
+    <div 
+      className={"card" + (selected ? " card-selected" : "")}
+      style={{background: realType.color}}
+      onClick={handleClick}
+    >
+      {selected && <div className="tick">
+        <Tick />
+      </div>}
       <img src={image} />
       <div className="card-content">
         <div>{title}</div>
