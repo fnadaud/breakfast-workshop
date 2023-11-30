@@ -1,5 +1,6 @@
 import picture1 from "../assets/filling-picture1.png"
 import picture2 from "../assets/filling-picture2.png"
+import avatar from "../assets/avatar.png"
 
 const MakeBreakFast = () => {
     return (
@@ -37,21 +38,10 @@ const MakeBreakFast = () => {
                 <p>
                     Mauris vitae ipsum massa. Proin nec leo ac magna suscipit condimentum. Duis nec interdum elit. Nulla gravida nisi turpis, et blandit lacus ultrices id. Vestibulum vehicula sapien eleifend ultricies fermentum. Ut volutpat efficitur eros vel feugiat. In ut pulvinar sem. Suspendisse sagittis id mauris ut interdum.
                 </p>
-                <p>
-                    Fusce facilisis metus ipsum, id fringilla eros ultricies non. Phasellus nec augue ante. Etiam quis dignissim augue, non cursus tellus. Ut non scelerisque augue. Phasellus suscipit ornare ligula in rutrum. Mauris nec condimentum augue. Nulla ac venenatis quam. Nullam porta eros nec lobortis scelerisque. Nam sagittis diam sit amet libero hendrerit, in viverra ligula vulputate. Fusce venenatis sed lectus sit amet euismod. Fusce sit amet elit quis lectus tincidunt hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, sapien sit amet aliquam porta, lectus mauris facilisis sapien, nec pulvinar ipsum orci sed nisi.
-                </p>
-                <p>
-                    Pellentesque convallis, mi in malesuada vestibulum, nisl ipsum iaculis arcu, eget accumsan orci urna et nibh. Donec suscipit purus quis feugiat bibendum. Pellentesque interdum sollicitudin ipsum, vel mattis ligula luctus ac. Sed tristique ex in diam fringilla, at egestas felis posuere. Morbi finibus, erat sed egestas interdum, risus massa sagittis odio, at finibus ipsum ligula vitae ipsum. Curabitur tristique varius urna ac semper. In hac habitasse platea dictumst. Aenean nec dui vel odio imperdiet tristique et eu nunc. Etiam ullamcorper eu risus at gravida. Quisque ac sem ante. Curabitur aliquam at neque id condimentum. Phasellus eu ligula et arcu aliquet rutrum. Donec sed ultricies mi.
-                </p>
-                <p>
-                    Praesent nibh leo, aliquet ac vulputate eget, maximus sit amet ex. Donec sit amet tortor non turpis rutrum finibus at vitae tellus. Integer nec eleifend lacus. Sed sed nisi non risus maximus scelerisque. Proin consectetur, erat ut fringilla tempor, nibh turpis accumsan dolor, id aliquam ligula tortor ut mauris. Sed vitae accumsan nulla. Curabitur non diam lacus. Duis nec est posuere, tempus ante non, feugiat quam.
-                </p>
-                <p>
-                    Nunc vitae mauris lacinia, euismod enim non, varius magna. Nulla facilisi. Ut nec neque neque. Morbi scelerisque lobortis maximus. Cras interdum nunc in bibendum ornare. Suspendisse tincidunt commodo sem, molestie ultrices velit convallis vel. Etiam laoreet ultricies tortor quis scelerisque. In nec magna et urna aliquet consequat vel fringilla enim. Donec enim risus, euismod ut neque nec, eleifend finibus ex. Sed sed lacinia ligula. Nulla quis tincidunt nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec ac erat eget sapien fermentum volutpat. Curabitur dictum tellus vitae neque gravida lobortis. Vivamus ornare mollis ex, gravida dapibus eros pulvinar nec. Nunc ut nisi nec nisi vestibulum hendrerit.
-                </p>
-                <p>
-                    Nunc ullamcorper ex ut quam porta elementum. Sed ultrices porta lectus molestie hendrerit. Ut turpis libero, facilisis condimentum aliquet sed, finibus et tortor. Nam pulvinar justo eu enim varius faucibus. Fusce consequat ante velit, eget rutrum mauris pretium vitae. Proin vulputate sapien sed neque feugiat, sed placerat tellus faucibus. Sed faucibus mauris est, vitae posuere felis iaculis sit amet.
-                </p>
+                <div className="workshop-signature">
+                    <img className="workshop-avatar" src={avatar} />
+                    <div>Cet atelier vous est proposé par Célie Griffon.</div>
+                </div>
             </div>
         </>
     )
