@@ -1,12 +1,12 @@
-import { useState } from "react";
-import defaultImage from "./assets/default.png";
-import Tick from "./Tick";
+import { useState } from "react"
+import defaultImage from "../assets/default.png"
+import Tick from "./Tick"
 
-const Card = ({ title, type, image = defaultImage }: { title: string, type: string, image: string }) => {
-  const [selected, setSelected] = useState(false);
+const Card = ({ title, type, image = defaultImage }: { title: string, type: string, image?: string }) => {
+  const [selected, setSelected] = useState(false)
 
   const handleClick = () => {
-    setSelected(!selected);
+    setSelected(!selected)
   }
 
   const computeType = () => {
@@ -38,7 +38,7 @@ const Card = ({ title, type, image = defaultImage }: { title: string, type: stri
     }
   }
 
-  const realType = computeType();
+  const realType = computeType()
 
   return (
     <div 
