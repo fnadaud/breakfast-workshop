@@ -2,10 +2,11 @@ import { useState } from "react"
 import defaultImage from "../assets/default.png"
 import Tick from "./Tick"
 
-const Card = ({ title, type, image = defaultImage }: { title: string, type: string, image?: string }) => {
+const Card = ({ title, type, image = defaultImage, handleSelection }: { title: string, type: string, image?: string, handleSelection: Function }) => {
   const [selected, setSelected] = useState(false)
 
   const handleClick = () => {
+    handleSelection({ title, image, type })
     setSelected(!selected)
   }
 
@@ -29,6 +30,11 @@ const Card = ({ title, type, image = defaultImage }: { title: string, type: stri
       return {
         color: "linear-gradient(150deg, rgba(126,71,62,1) 60%, rgba(112,63,54,1) 100%)",
         label: "Céréale"
+      }
+    } else if (type === "SUGAR") {
+      return {
+        color: "linear-gradient(150deg, rgba(219,36,6,1) 60%, rgba(196,35,6,1) 100%)",
+        label: "Produit sucré"
       }
     } else {
       return {
